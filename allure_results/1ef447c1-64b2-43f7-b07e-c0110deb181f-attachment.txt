@@ -1,0 +1,2 @@
+{'email': 'vddgv@gmail.com', 'password': 'mfawocveva', 'name': 'zamtzlzjes'}
+{'success': True, 'user': {'email': 'vddgv@gmail.com', 'name': 'zamtzlzjes'}, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWU1NmE0OWVkMjgwMDAxYjQ3NTNhZiIsImlhdCI6MTcyMTY1MjkwMCwiZXhwIjoxNzIxNjU0MTAwfQ.GyWFk4e0AibBBpFsFAb8qjV0_hyvKmCxFDK49C4lM1s', 'refreshToken': '5f343d996b8182d4d9f4270c5911e53edd910e100f02ea16c20bf9e42d188093e95583bde72fc50a'}

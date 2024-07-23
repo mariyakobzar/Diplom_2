@@ -1,0 +1,4 @@
+{'ingredients': ['61c0c5a71d1f82001bdaaa6d', '61c0c5a71d1f82001bdaaa6f', '61c0c5a71d1f82001bdaaa72']}
+<class 'dict'>
+<class 'str'>
+{'success': True, 'orders': [{'_id': '669e56b09ed280001b4753c8', 'ingredients': ['61c0c5a71d1f82001bdaaa6d', '61c0c5a71d1f82001bdaaa6f', '61c0c5a71d1f82001bdaaa72'], 'status': 'done', 'name': 'Spicy бессмертный флюоресцентный бургер', 'createdAt': '2024-07-22T12:55:12.743Z', 'updatedAt': '2024-07-22T12:55:13.440Z', 'number': 99282}], 'total': 99282, 'totalToday': 422}

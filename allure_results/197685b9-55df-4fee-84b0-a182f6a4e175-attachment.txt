@@ -1,0 +1,2 @@
+{'email': 'euxhz@gmail.com', 'password': 'pxzhuqrvzo', 'name': 'ezxppgohlt'}
+{'success': False, 'message': 'Email, password and name are required fields'}

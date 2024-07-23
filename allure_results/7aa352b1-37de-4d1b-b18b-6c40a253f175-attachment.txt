@@ -1,0 +1,2 @@
+{'success': True, 'name': 'Spicy флюоресцентный бургер', 'order': {'number': 7207}}
+7207

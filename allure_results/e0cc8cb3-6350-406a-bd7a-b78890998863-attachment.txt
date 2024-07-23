@@ -1,0 +1,2 @@
+{'email': 'yvyys@gmail.com', 'password': 'feajjxseca', 'name': 'nbxeqlqsss'}
+{'success': True, 'user': {'email': 'yvyys@gmail.com', 'name': 'nbxeqlqsss'}, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWU1NmE3OWVkMjgwMDAxYjQ3NTNiOSIsImlhdCI6MTcyMTY1MjkwMywiZXhwIjoxNzIxNjU0MTAzfQ.jhiN8JeKyvBsPuC5ZhKYPnZ8kb51TcST9FAvuhYU87Q', 'refreshToken': '174d391ba1ca4a2a25299367a5109738fb26814f18d5b77160819e810da2f466ffa6793d4b254d53'}

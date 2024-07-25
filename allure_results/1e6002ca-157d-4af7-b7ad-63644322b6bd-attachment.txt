@@ -1,3 +1,0 @@
-{'email': 'fahuf@gmail.com', 'password': 'zsgdnuddpa', 'name': 'qwhrbrxngs'}
-{'success': True, 'user': {'email': 'fahuf@gmail.com', 'name': 'qwhrbrxngs'}, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWU1NmE3OWVkMjgwMDAxYjQ3NTNiYiIsImlhdCI6MTcyMTY1MjkwMywiZXhwIjoxNzIxNjU0MTAzfQ.gmlt01Iw9H4g_Rvv0ojvTBLiuEH9tfLcaQdNebOIPpU', 'refreshToken': '76e34ddf8c7f3974098747aac1568e65a440f36413e5f196a4684754991983ae37b138172ad52e95'}
-{'success': False, 'message': 'User already exists'}

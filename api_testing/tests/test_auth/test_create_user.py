@@ -1,71 +1,54 @@
 import allure
 import requests
 
-from api_testing.data import Urls
+from api_testing.data import Urls, Responses
 
 
 class TestCreateUser:
 
     @allure.title('Создание пользователя')
-    def test_create_auth_new_user_positive_result(self, register_new_user):
-        payload = register_new_user
-        print(payload)
+    def test_create_auth_new_user_positive_result(self, user_credentials):
+        payload = user_credentials
         response = requests.post(f'{Urls.URL}{Urls.CREATE_USER}', data=payload)
         r = response.json()
-        print(r)
 
         assert response.status_code == 200
         assert r['success'] == True
 
     @allure.title('Создание уже зарегистрированного пользователя')
-    def test_create_auth_the_same_user_negative_result(self, register_new_user):
-        self.test_create_auth_new_user_positive_result(register_new_user)
-        payload = register_new_user
+    def test_create_auth_the_same_user_negative_result(self, return_data_pass):
+        payload = return_data_pass
         response = requests.post(f'{Urls.URL}{Urls.CREATE_USER}', data=payload)
-        r = response.json()
-        print(r)
 
         assert response.status_code == 403
-        assert response.text == '{"success":false,"message":"User already exists"}'
+        assert response.text == Responses.USER_ALREADY_EXISTS
 
     @allure.title('Создание пользователя без email')
-    def test_create_auth_without_email_negative_result(self, register_new_user):
-        param = register_new_user
-        print(param)
+    def test_create_auth_without_email_negative_result(self, user_credentials):
         payload = {
-            "password": param['password'],
-            "name": param['name']
+            "password": user_credentials['password'],
+            "name": user_credentials['name']
         }
         response = requests.post(f'{Urls.URL}{Urls.CREATE_USER}', data=payload)
-        r = response.json()
-        print(r)
         assert response.status_code == 403
-        assert response.text == '{"success":false,"message":"Email, password and name are required fields"}'
+        assert response.text == Responses.EMAIL_PASS_NAME_REQUIRED
 
     @allure.title('Создание пользователя без password')
-    def test_create_auth_without_password_negative_result(self, register_new_user):
-        param = register_new_user
-        print(param)
+    def test_create_auth_without_password_negative_result(self, user_credentials):
         payload = {
-            "email": param['email'],
-            "name": param['name']
+            "email": user_credentials['email'],
+            "name": user_credentials['name']
         }
         response = requests.post(f'{Urls.URL}{Urls.CREATE_USER}', data=payload)
-        r = response.json()
-        print(r)
         assert response.status_code == 403
-        assert response.text == '{"success":false,"message":"Email, password and name are required fields"}'
+        assert response.text == Responses.EMAIL_PASS_NAME_REQUIRED
 
     @allure.title('Создание пользователя без name')
-    def test_create_auth_without_email_negative_result(self, register_new_user):
-        param = register_new_user
-        print(param)
+    def test_create_auth_without_email_negative_result(self, user_credentials):
         payload = {
-            "email": param['email'],
-            "password": param['password']
+            "email": user_credentials['email'],
+            "password": user_credentials['password']
         }
         response = requests.post(f'{Urls.URL}{Urls.CREATE_USER}', data=payload)
-        r = response.json()
-        print(r)
         assert response.status_code == 403
-        assert response.text == '{"success":false,"message":"Email, password and name are required fields"}'
+        assert response.text == Responses.EMAIL_PASS_NAME_REQUIRED

@@ -1,7 +1,7 @@
 import allure
 import requests
 
-from api_testing.data import Urls
+from api_testing.data import Urls, Responses
 from api_testing.tests.test_auth.test_create_user import TestCreateUser
 
 
@@ -15,12 +15,9 @@ class TestUpdateUser:
             "email": f'123{email}',
             "name": f'Mk{name}'
         }
-        print(return_data_pass)
-        print(payload)
         response = requests.patch(f'{Urls.URL}{Urls.UPDATE_USER}',
                                  data=payload, headers={'Authorization': return_data_pass['accessToken']})
         r = response.json()
-        print(r)
         assert response.status_code == 200
         assert payload['email'] == r['user']['email']
         assert payload['name'] == r['user']['name']
@@ -33,14 +30,10 @@ class TestUpdateUser:
             "email": f'123{email}',
             "name": name
         }
-        print(return_data_pass)
-        print(payload)
         response = requests.patch(f'{Urls.URL}{Urls.UPDATE_USER}',
                                   data=payload)
-        r = response.json()
-        print(r)
         assert response.status_code == 401
-        assert response.text == '{"success":false,"message":"You should be authorised"}'
+        assert response.text == Responses.NO_AUTHORISATION
 
     @allure.title('Обновление имени пользователя без авторизации')
     def test_update_user_without_authorization_negative_result(self, return_data_pass):
@@ -50,27 +43,19 @@ class TestUpdateUser:
             "email": email,
             "name": f'Mk{name}'
         }
-        print(return_data_pass)
-        print(payload)
         response = requests.patch(f'{Urls.URL}{Urls.UPDATE_USER}',
                                   data=payload)
-        r = response.json()
-        print(r)
         assert response.status_code == 401
-        assert response.text == '{"success":false,"message":"You should be authorised"}'
+        assert response.text == Responses.NO_AUTHORISATION
 
     @allure.title('Обновление email на уже существующий email')
     def test_update_user_with_authorization_positive_result\
-                    (self, return_data_pass, register_new_user_2):
-        user_2 = TestCreateUser()
-        user_2.test_create_auth_new_user_positive_result(register_new_user_2)
-        email_2 = register_new_user_2['email']
+                    (self, return_data_pass, return_data_pass_user2):
+        email_2 = return_data_pass_user2['email']
         payload = {
             "email": email_2
         }
         response = requests.patch(f'{Urls.URL}{Urls.UPDATE_USER}',
                                   data=payload, headers={'Authorization': return_data_pass['accessToken']})
-        print(response.status_code)
-        print(response.text)
         assert response.status_code == 403
-        assert response.text == '{"success":false,"message":"User with such email already exists"}'
+        assert response.text == Responses.USER_WITH_SUCH_EMAIL_ALREADY_EXISTS

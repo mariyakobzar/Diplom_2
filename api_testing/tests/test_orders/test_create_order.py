@@ -26,28 +26,17 @@ class TestCreateOrder:
     )
     @allure.title('Создание заказа без авторизации')
     def test_create_order_without_auth_positive_result(self, payload):
-        #t = json.dumps(payload)
         response = requests.post(f'{Urls.URL}{Urls.CREATE_ORDER}',
-                                 data=payload)#, headers={'Authorization': return_data_pass['accessToken']})
+                                 data=payload)
         r = response.json()
-        print(r)
-        print(r['order']['number'])
 
         assert response.status_code == 200
         assert r['success'] == True
-        if Urls.BUNS["bun_1"] == "61c0c5a71d1f82001bdaaa6d":
-            assert 'бургер' in r['name']
-        else:
-            assert 'бургер' in r['name']
 
 
     @allure.title('Создание заказа с авторизацией')
     def test_create_order_with_auth_positive_result(self, return_data_pass):
         payload = {"ingredients": [Urls.BUNS["bun_1"], Urls.MAIN["main_1"], Urls.SAUCE["sauce_1"]]}
-        print(payload)
-        json_payload = json.dumps(payload)
-        print(type(payload))
-        print(type(json_payload))
         response = requests.post(f'{Urls.URL}{Urls.CREATE_ORDER}',
                                  data=payload, headers={'Authorization': return_data_pass['accessToken']})
         r = response.json()

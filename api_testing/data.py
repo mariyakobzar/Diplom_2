@@ -37,3 +37,11 @@ class Urls():
         "sauce_3": "61c0c5a71d1f82001bdaaa74",
         "sauce_4": "61c0c5a71d1f82001bdaaa75"
     }
+
+class Responses:
+
+    USER_ALREADY_EXISTS = '{"success":false,"message":"User already exists"}'
+    EMAIL_PASS_NAME_REQUIRED = '{"success":false,"message":"Email, password and name are required fields"}'
+    EMAIL_PASS_INCORRECT = '{"success":false,"message":"email or password are incorrect"}'
+    NO_AUTHORISATION = '{"success":false,"message":"You should be authorised"}'
+    USER_WITH_SUCH_EMAIL_ALREADY_EXISTS = '{"success":false,"message":"User with such email already exists"}'

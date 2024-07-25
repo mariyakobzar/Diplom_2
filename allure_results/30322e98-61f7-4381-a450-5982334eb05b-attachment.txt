@@ -1,3 +1,0 @@
-{'email': 'loryw@gmail.com', 'password': 'xkfoiorseo', 'name': 'ahovdooyxb'}
-{'success': True, 'user': {'email': 'loryw@gmail.com', 'name': 'ahovdooyxb'}, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWU1NmE1OWVkMjgwMDAxYjQ3NTNiMSIsImlhdCI6MTcyMTY1MjkwMSwiZXhwIjoxNzIxNjU0MTAxfQ.da0dfmOks_Td4LDSGiuFffxbAZojpdwnotqFUl2o33w', 'refreshToken': '73fe563b90c99924fa1121ea1b87510cd2ac01856ec744e3ceaa074ca8a9eaa53ea4954675514da7'}
-{'success': False, 'message': 'User already exists'}

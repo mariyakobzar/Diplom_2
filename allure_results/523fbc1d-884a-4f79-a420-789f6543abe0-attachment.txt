@@ -1,3 +1,0 @@
-{'email': 'eiksy@gmail.com', 'password': 'dmpoeiqmls', 'name': 'nolbaxcogz', 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWU1NmE2OWVkMjgwMDAxYjQ3NTNiNyIsImlhdCI6MTcyMTY1MjkwMiwiZXhwIjoxNzIxNjU0MTAyfQ.lcgm6I0dBEwqrQlkbRhWXL9VNKidevzmuekyMgGkj2A'}
-{'email': 'eiksy@gmail.com', 'name': 'Mknolbaxcogz'}
-{'success': False, 'message': 'You should be authorised'}

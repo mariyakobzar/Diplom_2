@@ -1,3 +1,0 @@
-{'email': 'jxepj@gmail.com', 'password': 'srtyjfjgrp', 'name': 'gyunojcrlh'}
-{'success': True, 'user': {'email': 'jxepj@gmail.com', 'name': 'gyunojcrlh'}, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWU1NmEyOWVkMjgwMDAxYjQ3NTNhOCIsImlhdCI6MTcyMTY1Mjg5OCwiZXhwIjoxNzIxNjU0MDk4fQ.vMyHkNLverH3_kXe1gB9zFMY4nftiyXVHda_GgFGDeI', 'refreshToken': '77b387fbb556fffc93e1f7eca6bb8c1dfd4d6f52afba797fda4b12a7d7db3c7002286b0d1c6fc8f1'}
-{'success': False, 'message': 'User already exists'}

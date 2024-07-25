@@ -1,4 +1,0 @@
-{'email': 'zblby@gmail.com', 'password': 'dfuvvahyyc', 'name': 'ryvurtuayy'}
-{'success': True, 'user': {'email': 'zblby@gmail.com', 'name': 'ryvurtuayy'}, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWU1NmE2OWVkMjgwMDAxYjQ3NTNiNSIsImlhdCI6MTcyMTY1MjkwMiwiZXhwIjoxNzIxNjU0MTAyfQ.yDLCRLR0Sdv9YfIBt3r39qIlpoJQ7-gD8SK4agFBLBw', 'refreshToken': '234935cb30c56820b432eb328eaaa1bb40149b3b1b65e293ecaf59058d95639eef0d66ca3f3f7da3'}
-403
-{"success":false,"message":"User with such email already exists"}

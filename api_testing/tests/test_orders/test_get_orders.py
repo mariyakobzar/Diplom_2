@@ -2,7 +2,7 @@
 import allure
 import requests
 
-from api_testing.data import Urls
+from api_testing.data import Urls, Responses
 from api_testing.tests.test_orders.test_create_order import TestCreateOrder
 
 
@@ -28,7 +28,6 @@ class TestGetOrders:
 
         response = requests.get(f'{Urls.URL}{Urls.GET_ORDERS}')
         r = response.json()
-        print(r)
         id = r['orders'][0]['_id']
         assert r['orders'][0]['_id'] == id
         assert response.status_code == 200
@@ -42,7 +41,6 @@ class TestGetOrders:
         response = requests.get(f'{Urls.URL}{Urls.GET_ORDERS_USER}',
                                 headers={'Authorization': return_data_pass['accessToken']})
         r = response.json()
-        print(r)
         id = r['orders'][0]['_id']
         assert r['orders'][0]['_id'] == id
         assert response.status_code == 200
@@ -54,7 +52,5 @@ class TestGetOrders:
         user.test_create_order_with_auth_positive_result(return_data_pass)
 
         response = requests.get(f'{Urls.URL}{Urls.GET_ORDERS_USER}')
-        r = response.json()
-        print(r)
         assert response.status_code == 401
-        assert response.text == '{"success":false,"message":"You should be authorised"}'
+        assert response.text == Responses.NO_AUTHORISATION

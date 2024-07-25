@@ -1,7 +1,7 @@
 import allure
 import requests
 
-from api_testing.data import Urls
+from api_testing.data import Urls, Responses
 
 
 class TestLoginUser:
@@ -29,7 +29,7 @@ class TestLoginUser:
                                  data=payload)
 
         assert response.status_code == 401
-        assert response.text == '{"success":false,"message":"email or password are incorrect"}'
+        assert response.text == Responses.EMAIL_PASS_INCORRECT
 
     @allure.title('Логин пользователя с неверным паролем')
     def test_login_user_negative_result(self, return_data_pass):
@@ -42,4 +42,4 @@ class TestLoginUser:
                                  data=payload)
 
         assert response.status_code == 401
-        assert response.text == '{"success":false,"message":"email or password are incorrect"}'
+        assert response.text == Responses.EMAIL_PASS_INCORRECT

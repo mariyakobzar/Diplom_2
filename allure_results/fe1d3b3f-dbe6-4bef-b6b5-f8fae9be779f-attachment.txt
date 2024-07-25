@@ -1,2 +1,0 @@
-{'email': 'dgznr@gmail.com', 'password': 'afquankvjb', 'name': 'hzeyirwine'}
-{'success': True, 'user': {'email': 'dgznr@gmail.com', 'name': 'hzeyirwine'}, 'accessToken': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWU1NmEyOWVkMjgwMDAxYjQ3NTNhNiIsImlhdCI6MTcyMTY1Mjg5OCwiZXhwIjoxNzIxNjU0MDk4fQ.qhkpbH3IMK55N22AN0LbbQ47juHDTVnRgX2gJz5Dd7s', 'refreshToken': '5d8abdfc11bd6be3c0a2ef7341770d8dcbf4f563d1bc02d55564d7393546579d73c1d4e8c6c4956c'}
